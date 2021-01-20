@@ -1,8 +1,17 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "TodoListInterface.h"
 
-TodoList(string fileName) {
+TodoList::TodoList() {
+	fstream inFile("TODOList.txt");
+
+	while(inFile.is_open() && )
+
+	inFile >> nextWord;
+}
+
+TodoList::~TodoList() {
 
 }
 
