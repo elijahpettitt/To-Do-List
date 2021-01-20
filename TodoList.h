@@ -9,7 +9,7 @@ using namespace std;
 
 class TodoList : public TodoListInterface {
 public:
-    TodoList() {}
+    TodoList();
     ~TodoList() {}
 
     /*
@@ -22,26 +22,17 @@ public:
     *
     *   Returns 1 if it removes an item, 0 otherwise
     */
-    int remove(string _task){
-      cout << "in remove" << endl;
-
-    }
+    int remove(string _task);
 
     /*
     *   Prints out the full todo list to the console
     */
-    void printTodoList() {
-      cout << "in print";
-
-    }
+    void printTodoList();
     
     /*
     *   Prints out all items of a todo list with a particular due date (specified by _duedate)
     */
-    void printDaysTasks(string _date) {
-      cout << "in print days tasks";
-
-    }
+    void printDaysTasks(string _date);
 };
 
 #endif
