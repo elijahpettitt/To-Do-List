@@ -15,9 +15,7 @@ public:
     /*
     *   Adds an item to the todo list with the data specified by the string "_duedate" and the task specified by "_task"
     */
-    void add(string _duedate, string _task){
-      cout << "in add";
-    }
+    void add(string _duedate, string _task);
 
     /*
     *   Removes an item from the todo list with the specified task name
@@ -25,7 +23,7 @@ public:
     *   Returns 1 if it removes an item, 0 otherwise
     */
     int remove(string _task){
-      cout << "in remove";
+      cout << "in remove" << endl;
 
     }
 
