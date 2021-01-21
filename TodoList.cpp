@@ -5,14 +5,26 @@
 
 TodoList::TodoList() {
 	fstream inFile("TODOList.txt");
+	cout << "in constructor" << endl;
+	string s = "";
 
-	while(inFile.is_open() && )
+	while(inFile.is_open() && !inFile.eof()) {
+		inFile >> s;
+		tasks.push_back(s);
+		cout << s << endl;
+	}
 
-	inFile >> nextWord;
+	inFile.close();
 }
 
 TodoList::~TodoList() {
+	fstream outFile;
+	outFile.open("TODOList.txt"); // make it truncate
+	cout << "in destructor  " << outFile.is_open() << endl;
 
+	outFile << "Replaced!";
+
+	outFile.close();
 }
 
 

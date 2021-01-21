@@ -11,7 +11,7 @@ using namespace std;
 class TodoList : public TodoListInterface {
 	public:
 
-		vector<string> tasks;
+		vector<string> tasks = {};
 
 		TodoList();
 		~TodoList();
