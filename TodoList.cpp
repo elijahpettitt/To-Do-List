@@ -3,6 +3,18 @@
 #include <string>
 #include "TodoListInterface.h"
 
+// ask about public varieable tasks
+// just a private variable that only that one can access
+
+// ask about different main, how to make it univerally compatiable
+// not a requirment but it should
+
+// ask about syntax for * and &
+// * declares a pointer
+// & requests the address
+
+
+
 TodoList::TodoList() {
 	fstream inFile("TODOList.txt");
 	cout << "in constructor" << endl;
