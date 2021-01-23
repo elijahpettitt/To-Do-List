@@ -1,5 +1,6 @@
 sunday
+church
+tuesday
 run
-tueday
-play
-friday
+fiday
+date

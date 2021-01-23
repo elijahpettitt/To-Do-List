@@ -20,12 +20,16 @@ TodoList::TodoList() {
 	cout << "in constructor" << endl;
 	string s = "";
 
-	inFile >> s;
+	if (inFile.is_open()) {
 
-	while(inFile.is_open() && !inFile.eof()) {
-		tasks.push_back(s);
-		//cout << s << endl;
 		inFile >> s;
+		while (!inFile.eof()) {\
+			tasks.push_back(s);
+			inFile >> s;
+		}
+	}
+	else {
+		cout << "failed to open file" << endl;
 	}
 
 	inFile.close();
@@ -54,6 +58,9 @@ int TodoList::remove(string task) {
   cout << "in remove" << endl;
 	for(int i = 0; i < tasks.size(); i++){
 		if (!tasks.at(i).compare(task)) {
+			cout << tasks.at(i) << endl;
+			tasks.erase(tasks.begin()+i);
+			tasks.erase(tasks.begin()+i);
 			cout << tasks.at(i) << endl;
 		}
 	}

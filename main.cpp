@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	tdl.printTodoList();
+	cout << endl;
 
 	command = argv[1];
 
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
+	cout << endl;
 	tdl.printTodoList();
 
 	return 0;
