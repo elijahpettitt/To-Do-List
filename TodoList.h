@@ -9,9 +9,11 @@
 using namespace std;
 
 class TodoList : public TodoListInterface {
-	public:
-
+	private:
 		vector<string> tasks = {};
+
+
+	public:
 
 		TodoList();
 		~TodoList();

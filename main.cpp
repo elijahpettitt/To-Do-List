@@ -11,16 +11,28 @@ int main(int argc, char *argv[]) {
 		return 1;
 	}
 
+	tdl.printTodoList();
+
 	command = argv[1];
 
 	if (argc == 4 && !command.compare("add")) {
 		tdl.add(argv[2], argv[3]);
+	}
+	else if (argc == 3 && !command.compare("remove")) {
+		tdl.remove(argv[2]);
+	}
+	else if (argc == 2 && !command.compare("printList")) {
+		tdl.printTodoList();
+	}
+	else if (argc == 3 && !command.compare("printDay")) {
+		tdl.printDaysTasks(argv[2]);
 	}
 	else {
 		cout << "Incorrect command line input" << endl;
 		return 1;
 	}
 
+	tdl.printTodoList();
 
 	return 0;
 }
