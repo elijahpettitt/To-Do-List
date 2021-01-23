@@ -4,15 +4,14 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
+
   string command = "none";
 	TodoList tdl;
+	
 	if (argc == 1 || argc > 4){
 		cout << "Not enough arguments or too many" << endl;
 		return 1;
 	}
-
-	tdl.printTodoList();
-	cout << endl;
 
 	command = argv[1];
 
@@ -32,9 +31,6 @@ int main(int argc, char *argv[]) {
 		cout << "Incorrect command line input" << endl;
 		return 1;
 	}
-
-	cout << endl;
-	tdl.printTodoList();
 
 	return 0;
 }
