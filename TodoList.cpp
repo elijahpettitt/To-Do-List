@@ -61,7 +61,7 @@ void TodoList::printTodoList() {
 void TodoList::printDaysTasks(string date) {
 	for(int i = 0; i < tasks.size(); i++){
 		if (!tasks.at(i).compare(date)) {
-			cout << tasks.at(i+1);
+			cout << tasks.at(i+1) << endl;
 		}
 	}
 }
