@@ -22,10 +22,11 @@ TodoList::TodoList() {
 
 	if (inFile.is_open()) {
 
-		inFile >> s;
-		while (!inFile.eof()) {\
-			tasks.push_back(s);
+		while (!inFile.eof()) {
 			inFile >> s;
+			if (!inFile.eof()) {
+				tasks.push_back(s);
+			}
 		}
 	}
 	else {
@@ -58,10 +59,9 @@ int TodoList::remove(string task) {
   cout << "in remove" << endl;
 	for(int i = 0; i < tasks.size(); i++){
 		if (!tasks.at(i).compare(task)) {
-			cout << tasks.at(i) << endl;
 			tasks.erase(tasks.begin()+i);
+			i--;
 			tasks.erase(tasks.begin()+i);
-			cout << tasks.at(i) << endl;
 		}
 	}
 }
@@ -75,4 +75,9 @@ void TodoList::printTodoList() {
 
 void TodoList::printDaysTasks(string date) {
   cout << "in print days tasks" << endl;
+	for(int i = 0; i < tasks.size(); i++){
+		if (!tasks.at(i).compare(date)) {
+			cout << tasks.at(i+1);
+		}
+	}
 }
